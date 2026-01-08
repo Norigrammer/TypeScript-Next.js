@@ -30,7 +30,7 @@ export function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <Link href="/" className="text-xl font-bold">
-              一美株式会社
+              一美Group
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
               スーツ販売、不動産、コンサルティング、SNSマーケティングの4つの事業を通じて、
@@ -121,7 +121,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="mt-12 border-t pt-8">
           <p className="text-center text-sm text-muted-foreground">
-            © {new Date().getFullYear()} 一美株式会社. All rights reserved.
+            © {new Date().getFullYear()} 一美Group. All rights reserved.
           </p>
         </div>
       </div>

@@ -29,7 +29,7 @@ export function Header() {
       <nav className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
-          <span className="text-xl font-bold">一美株式会社</span>
+          <span className="text-xl font-bold">一美Group</span>
         </Link>
 
         {/* Desktop Navigation */}

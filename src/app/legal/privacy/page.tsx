@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card'
 
 export const metadata: Metadata = {
   title: 'プライバシーポリシー',
-  description: '一美株式会社の個人情報保護方針についてご説明します。',
+  description: '一美Groupの個人情報保護方針についてご説明します。',
 }
 
 export default function PrivacyPage() {
@@ -23,7 +23,7 @@ export default function PrivacyPage() {
 
               <h2 className="mt-8 text-xl font-bold">1. 基本方針</h2>
               <p>
-                一美株式会社（以下「当社」）は、お客様の個人情報の重要性を認識し、
+                一美Group（以下「当社」）は、お客様の個人情報の重要性を認識し、
                 その適正な取得、利用、管理に努めます。当社は、個人情報保護に関する法令および
                 その他の規範を遵守し、お客様の個人情報の保護に努めます。
               </p>
@@ -60,7 +60,7 @@ export default function PrivacyPage() {
               <h2 className="mt-8 text-xl font-bold">6. お問い合わせ</h2>
               <p>本プライバシーポリシーに関するお問い合わせは、以下までご連絡ください：</p>
               <p>
-                一美株式会社<br />
+                一美Group<br />
                 Email: info@kazumi.co.jp
               </p>
             </CardContent>

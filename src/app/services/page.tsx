@@ -7,7 +7,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
 
 export const metadata: Metadata = {
   title: '事業一覧',
-  description: '一美株式会社の4つの事業領域をご紹介します。スーツ販売、不動産、コンサルティング、SNSマーケティング。',
+  description: '一美Groupの4つの事業領域をご紹介します。スーツ販売、不動産、コンサルティング、SNSマーケティング。',
 }
 
 const services = [

@@ -50,7 +50,7 @@ export default function HomePage() {
     <>
       {/* Hero Section */}
       <Hero
-        subtitle="一美株式会社"
+        subtitle="一美Group"
         title="ビジネスと生活を豊かにする4つの事業"
         description="スーツ販売、不動産、コンサルティング、SNSマーケティング。それぞれの分野で培った専門性を活かし、お客様の課題解決に貢献します。"
         primaryCta={{ text: 'お問い合わせ', href: '/contact' }}
@@ -79,7 +79,7 @@ export default function HomePage() {
           <SectionHeader
             subtitle="Why Choose Us"
             title="選ばれる理由"
-            description="一美株式会社が選ばれる理由をご紹介します。"
+            description="一美Groupが選ばれる理由をご紹介します。"
           />
           <div className="grid gap-8 md:grid-cols-3">
             {[

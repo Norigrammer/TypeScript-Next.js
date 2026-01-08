@@ -11,17 +11,17 @@ const notoSansJP = Noto_Sans_JP({
 
 export const metadata: Metadata = {
   title: {
-    default: '一美株式会社 | スーツ販売・不動産・コンサルティング・SNSマーケティング',
-    template: '%s | 一美株式会社',
+    default: '一美Group | スーツ販売・不動産・コンサルティング・SNSマーケティング',
+    template: '%s | 一美Group',
   },
   description:
-    '一美株式会社は、スーツ販売、不動産、コンサルティング、SNSマーケティングの4つの事業を通じて、お客様のビジネスと生活を豊かにします。',
-  keywords: ['一美株式会社', 'スーツ販売', '不動産', 'コンサルティング', 'SNSマーケティング'],
-  authors: [{ name: '一美株式会社' }],
+    '一美Groupは、スーツ販売、不動産、コンサルティング、SNSマーケティングの4つの事業を通じて、お客様のビジネスと生活を豊かにします。',
+  keywords: ['一美Group', 'スーツ販売', '不動産', 'コンサルティング', 'SNSマーケティング'],
+  authors: [{ name: '一美Group' }],
   openGraph: {
     type: 'website',
     locale: 'ja_JP',
-    siteName: '一美株式会社',
+    siteName: '一美Group',
   },
 }
 

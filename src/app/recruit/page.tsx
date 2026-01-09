@@ -79,7 +79,7 @@ export default function RecruitPage() {
             <h2 className="mb-8 text-3xl font-bold">採用メッセージ</h2>
             <p className="mb-6 text-muted-foreground">
               一美Groupは2024年に設立したばかりのスタートアップです。
-              スーツ販売、不動産、コンサルティング、SNSマーケティングの4つの事業を展開し、
+              不動産、スーツ販売、コンサルティング、SNSマーケティングの4つの事業を展開し、
               お客様の多様なニーズにお応えしています。
             </p>
             <p className="text-muted-foreground">

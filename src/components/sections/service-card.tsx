@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -15,6 +16,7 @@ interface ServiceCardProps {
   ctaText?: string
   icon?: LucideIcon
   index?: number
+  backgroundImage?: string
 }
 
 export function ServiceCard({
@@ -25,6 +27,7 @@ export function ServiceCard({
   ctaText = '詳しく見る',
   icon: Icon,
   index = 0,
+  backgroundImage,
 }: ServiceCardProps) {
   return (
     <motion.div
@@ -33,8 +36,21 @@ export function ServiceCard({
       transition={{ duration: 0.5, delay: index * 0.1 }}
       viewport={{ once: true }}
     >
-      <Card className="flex h-full flex-col transition-shadow hover:shadow-lg">
-        <CardHeader>
+      <Card className="group relative flex h-full flex-col overflow-hidden transition-shadow hover:shadow-lg">
+        {backgroundImage && (
+          <>
+            <div className="absolute inset-0 z-0">
+              <Image
+                src={backgroundImage}
+                alt=""
+                fill
+                className="object-cover blur-[2px] transition-all duration-300 group-hover:blur-[0.5px] group-hover:scale-105"
+              />
+            </div>
+            <div className="absolute inset-0 z-0 bg-background/80 transition-opacity duration-300 group-hover:bg-background/70" />
+          </>
+        )}
+        <CardHeader className="relative z-10">
           {Icon && (
             <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
               <Icon className="h-6 w-6 text-primary" />
@@ -44,7 +60,7 @@ export function ServiceCard({
           <CardDescription>{description}</CardDescription>
         </CardHeader>
         {features && features.length > 0 && (
-          <CardContent className="flex-1">
+          <CardContent className="relative z-10 flex-1">
             <ul className="space-y-2">
               {features.map((feature, i) => (
                 <li key={i} className="flex items-start text-sm text-muted-foreground">
@@ -55,11 +71,11 @@ export function ServiceCard({
             </ul>
           </CardContent>
         )}
-        <CardFooter>
-          <Button asChild variant="ghost" className="group p-0">
+        <CardFooter className="relative z-10">
+          <Button asChild variant="ghost" className="group/btn px-3 py-1 -ml-3 hover:bg-gray-200 rounded-md">
             <Link href={href}>
               {ctaText}
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
             </Link>
           </Button>
         </CardFooter>

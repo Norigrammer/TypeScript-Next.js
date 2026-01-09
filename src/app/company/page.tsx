@@ -17,7 +17,7 @@ const companyInfo = [
   { label: '設立', value: '2024年' },
   { label: '代表取締役', value: '渡辺 翔太' },
   { label: '従業員数', value: '4名' },
-  { label: '事業内容', value: 'スーツ販売、不動産事業、コンサルティング、SNSマーケティング' },
+  { label: '事業内容', value: '不動産事業、スーツ販売、コンサルティング、SNSマーケティング' },
   { label: 'メール', value: 'info@kazumi.co.jp' },
 ]
 
@@ -81,7 +81,7 @@ export default function CompanyPage() {
               「人と企業の可能性を拓く」
             </p>
             <p className="text-muted-foreground">
-              私たち一美Groupは、スーツ販売、不動産、コンサルティング、SNSマーケティングの4つの事業を通じて、
+              私たち一美Groupは、不動産、スーツ販売、コンサルティング、SNSマーケティングの4つの事業を通じて、
               お客様一人ひとりの可能性を最大限に引き出し、ビジネスと生活の両面から豊かな未来の実現をサポートします。
             </p>
           </div>

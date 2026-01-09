@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { ArrowRight } from 'lucide-react'
@@ -19,6 +20,8 @@ interface HeroProps {
     href: string
   }
   children?: React.ReactNode
+  wideButtons?: boolean
+  backgroundImage?: string
 }
 
 export function Hero({
@@ -28,10 +31,39 @@ export function Hero({
   primaryCta,
   secondaryCta,
   children,
+  wideButtons = false,
+  backgroundImage,
 }: HeroProps) {
+  const buttonContainerClass = wideButtons
+    ? 'flex flex-col items-center justify-center gap-4 w-full max-w-md mx-auto sm:flex-row'
+    : 'flex flex-col items-center justify-center gap-4 sm:flex-row'
+  const baseButtonClass = wideButtons ? 'flex-1 py-6 text-base' : ''
+  const primaryButtonClass = backgroundImage
+    ? baseButtonClass + ' shadow-lg'
+    : baseButtonClass
+  const secondaryButtonClass = backgroundImage
+    ? baseButtonClass + ' shadow-lg border-2 bg-background/90'
+    : baseButtonClass
+
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-muted/50 to-background py-20 md:py-32">
-      <div className="container mx-auto px-4">
+    <section className="relative overflow-hidden py-20 md:py-32">
+      {backgroundImage ? (
+        <>
+          <div className="absolute inset-0 z-0">
+            <Image
+              src={backgroundImage}
+              alt=""
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+          <div className="absolute inset-0 z-0 bg-background/70" />
+        </>
+      ) : (
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-muted/50 to-background" />
+      )}
+      <div className="container relative z-10 mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -52,7 +84,7 @@ export function Hero({
             {title}
           </h1>
           {description && (
-            <p className="mb-8 text-lg text-muted-foreground md:text-xl">
+            <p className="mb-8 whitespace-pre-line text-lg text-muted-foreground md:text-xl">
               {description}
             </p>
           )}
@@ -61,10 +93,10 @@ export function Hero({
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="flex flex-col items-center justify-center gap-4 sm:flex-row"
+              className={buttonContainerClass}
             >
               {primaryCta && (
-                <Button asChild size="lg">
+                <Button asChild size="lg" className={primaryButtonClass}>
                   <Link href={primaryCta.href}>
                     {primaryCta.text}
                     <ArrowRight className="ml-2 h-4 w-4" />
@@ -72,7 +104,7 @@ export function Hero({
                 </Button>
               )}
               {secondaryCta && (
-                <Button asChild variant="outline" size="lg">
+                <Button asChild variant="outline" size="lg" className={secondaryButtonClass}>
                   <Link href={secondaryCta.href}>{secondaryCta.text}</Link>
                 </Button>
               )}

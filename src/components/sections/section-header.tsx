@@ -31,7 +31,7 @@ export function SectionHeader({
       )}
       <h2 className="mb-4 text-3xl font-bold md:text-4xl">{title}</h2>
       {description && (
-        <p className="text-lg text-muted-foreground">{description}</p>
+        <p className="whitespace-pre-line text-lg text-muted-foreground">{description}</p>
       )}
     </motion.div>
   )

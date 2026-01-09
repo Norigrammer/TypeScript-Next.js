@@ -9,15 +9,15 @@ import { Button } from '@/components/ui/button'
 
 export const metadata: Metadata = {
   title: '会社情報',
-  description: '一美株式会社の会社概要、経営理念、チーム情報をご紹介します。',
+  description: '一美Groupの会社概要、経営理念、チーム情報をご紹介します。',
 }
 
 const companyInfo = [
-  { label: '会社名', value: '一美株式会社' },
+  { label: '会社名', value: '一美Group' },
   { label: '設立', value: '2024年' },
   { label: '代表取締役', value: '渡辺 翔太' },
   { label: '従業員数', value: '4名' },
-  { label: '事業内容', value: 'スーツ販売、不動産事業、コンサルティング、SNSマーケティング' },
+  { label: '事業内容', value: '不動産事業、スーツ販売、コンサルティング、SNSマーケティング' },
   { label: 'メール', value: 'info@kazumi.co.jp' },
 ]
 
@@ -69,7 +69,7 @@ export default function CompanyPage() {
       <Hero
         subtitle="Company"
         title="会社情報"
-        description="一美株式会社についてご紹介します"
+        description="一美Groupについてご紹介します"
       />
 
       {/* Mission & Vision */}
@@ -81,7 +81,7 @@ export default function CompanyPage() {
               「人と企業の可能性を拓く」
             </p>
             <p className="text-muted-foreground">
-              私たち一美株式会社は、スーツ販売、不動産、コンサルティング、SNSマーケティングの4つの事業を通じて、
+              私たち一美Groupは、不動産、スーツ販売、コンサルティング、SNSマーケティングの4つの事業を通じて、
               お客様一人ひとりの可能性を最大限に引き出し、ビジネスと生活の両面から豊かな未来の実現をサポートします。
             </p>
           </div>
@@ -94,7 +94,7 @@ export default function CompanyPage() {
           <SectionHeader
             subtitle="Values"
             title="私たちの価値観"
-            description="一美株式会社が大切にしている4つの価値観"
+            description="一美Groupが大切にしている4つの価値観"
           />
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {values.map((value) => (
@@ -156,7 +156,7 @@ export default function CompanyPage() {
           <SectionHeader
             subtitle="Team"
             title="経営陣"
-            description="一美株式会社を率いるメンバー"
+            description="一美Groupを率いるメンバー"
           />
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {team.map((member) => (

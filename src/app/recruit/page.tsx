@@ -9,7 +9,7 @@ import { CtaSection } from '@/components/sections/cta-section'
 
 export const metadata: Metadata = {
   title: '採用情報',
-  description: '一美株式会社で一緒に働きませんか。私たちは成長意欲のある人材を求めています。',
+  description: '一美Groupで一緒に働きませんか。私たちは成長意欲のある人材を求めています。',
 }
 
 const culture = [
@@ -51,7 +51,7 @@ export default function RecruitPage() {
           <SectionHeader
             subtitle="Culture"
             title="私たちの文化"
-            description="一美株式会社が大切にしている価値観"
+            description="一美Groupが大切にしている価値観"
           />
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {culture.map((item) => {
@@ -78,8 +78,8 @@ export default function RecruitPage() {
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-8 text-3xl font-bold">採用メッセージ</h2>
             <p className="mb-6 text-muted-foreground">
-              一美株式会社は2024年に設立したばかりのスタートアップです。
-              スーツ販売、不動産、コンサルティング、SNSマーケティングの4つの事業を展開し、
+              一美Groupは2024年に設立したばかりのスタートアップです。
+              不動産、スーツ販売、コンサルティング、SNSマーケティングの4つの事業を展開し、
               お客様の多様なニーズにお応えしています。
             </p>
             <p className="text-muted-foreground">

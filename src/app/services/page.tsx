@@ -7,10 +7,22 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
 
 export const metadata: Metadata = {
   title: '事業一覧',
-  description: '一美株式会社の4つの事業領域をご紹介します。スーツ販売、不動産、コンサルティング、SNSマーケティング。',
+  description: '一美Groupの4つの事業領域をご紹介します。不動産、スーツ販売、コンサルティング、SNSマーケティング。',
 }
 
 const services = [
+  {
+    title: '不動産事業',
+    description: '売買・賃貸・管理・投資まで、不動産に関するあらゆるニーズにワンストップで対応します。',
+    features: [
+      '物件売買サポート',
+      '賃貸仲介・管理',
+      '投資物件相談',
+    ],
+    href: '/services/real-estate',
+    cta: '詳しく見る',
+    icon: Building2,
+  },
   {
     title: 'スーツ販売',
     description: '上質な素材と確かな技術で、あなただけの一着をお仕立てします。既製品からフルオーダーまで、幅広いニーズに対応。',
@@ -23,18 +35,6 @@ const services = [
     href: '/services/suits',
     cta: '詳しく見る',
     icon: Briefcase,
-  },
-  {
-    title: '不動産事業',
-    description: '売買・賃貸・管理・投資まで、不動産に関するあらゆるニーズにワンストップで対応します。',
-    features: [
-      '物件売買サポート',
-      '賃貸仲介・管理',
-      '投資物件相談',
-    ],
-    href: '/services/real-estate',
-    cta: '詳しく見る',
-    icon: Building2,
   },
   {
     title: 'コンサルティング',

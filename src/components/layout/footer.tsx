@@ -4,8 +4,8 @@ import { Mail, Youtube } from 'lucide-react'
 
 const footerLinks = {
   services: [
-    { name: 'スーツ販売', href: '/services/suits' },
     { name: '不動産事業', href: '/services/real-estate' },
+    { name: 'スーツ販売', href: '/services/suits' },
     { name: 'コンサルティング', href: '/services/consulting' },
     { name: 'SNSマーケティング', href: '/services/sns-marketing' },
   ],
@@ -30,10 +30,10 @@ export function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <Link href="/" className="text-xl font-bold">
-              一美株式会社
+              一美Group
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
-              スーツ販売、不動産、コンサルティング、SNSマーケティングの4つの事業を通じて、
+              不動産、スーツ販売、コンサルティング、SNSマーケティングの4つの事業を通じて、
               お客様のビジネスと生活を豊かにします。
             </p>
             <div className="mt-6 space-y-3">
@@ -121,7 +121,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="mt-12 border-t pt-8">
           <p className="text-center text-sm text-muted-foreground">
-            © {new Date().getFullYear()} 一美株式会社. All rights reserved.
+            © {new Date().getFullYear()} 一美Group. All rights reserved.
           </p>
         </div>
       </div>

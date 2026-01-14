@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 // メールアドレス設定（環境変数から取得）
 const COMPANY_EMAIL = process.env.COMPANY_EMAIL || 'info@example.com'
 const FROM_EMAIL = process.env.FROM_EMAIL || 'noreply@example.com'
@@ -32,6 +30,16 @@ export async function POST(request: NextRequest) {
     }
 
     const inquiryLabel = inquiryTypeLabels[inquiryType] || inquiryType
+    const apiKey = process.env.RESEND_API_KEY
+
+    if (!apiKey) {
+      return NextResponse.json(
+        { error: 'メール送信設定が未構成です。管理者にお問い合わせください。' },
+        { status: 500 }
+      )
+    }
+
+    const resend = new Resend(apiKey)
 
     // Send notification email to company
     await resend.emails.send({

@@ -66,7 +66,7 @@ export default function RealEstatePage() {
       />
 
       {/* Services */}
-      <section className="py-16 md:py-24">
+      <section className="py-10 md:py-24">
         <div className="container mx-auto px-4">
           <SectionHeader
             subtitle="Services"
@@ -111,7 +111,7 @@ export default function RealEstatePage() {
       {/* CTA */}
       <CtaSection
         title="まずはお気軽にご相談ください"
-        description="物件探しから売却・投資相談まで、専門スタッフが対応いたします"
+        description="物件探しから売却・投資相談まで、専門スタッフが対応いたします。"
         primaryCta={{ text: 'お問い合わせ', href: '/contact?type=real-estate' }}
       />
     </>

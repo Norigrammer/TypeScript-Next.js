@@ -83,7 +83,7 @@ export default function SnsMarketingPage() {
       />
 
       {/* Platforms */}
-      <section className="py-16 md:py-24">
+      <section className="py-10 md:py-24">
         <div className="container mx-auto px-4">
           <SectionHeader
             subtitle="Platforms"
@@ -122,7 +122,7 @@ export default function SnsMarketingPage() {
       </section>
 
       {/* Services */}
-      <section className="bg-muted/50 py-16 md:py-24">
+      <section className="bg-muted/50 py-10 md:py-24">
         <div className="container mx-auto px-4">
           <SectionHeader
             subtitle="Services"
@@ -155,7 +155,7 @@ export default function SnsMarketingPage() {
       {/* CTA */}
       <CtaSection
         title="まずは無料診断から"
-        description="貴社のSNSアカウントを分析し、最適な戦略をご提案します"
+        description="貴社のSNSアカウントを分析し、最適な戦略をご提案します。"
         primaryCta={{ text: '無料診断を申し込む', href: '/contact?type=sns-marketing' }}
       />
     </>

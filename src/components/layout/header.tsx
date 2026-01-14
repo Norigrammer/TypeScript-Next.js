@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/button'
 const services = [
   { name: '不動産事業', href: '/services/real-estate', description: '売買・賃貸・管理の総合支援' },
   { name: 'スーツ販売', href: '/services/suits', description: '上質なオーダーメイドスーツ' },
-  { name: 'コンサルティング', href: '/services/consulting', description: '戦略立案から実行支援まで' },
+  { name: 'AIコンサルティング', href: '/services/ai-consulting', description: 'ChatGPT活用・業務自動化支援' },
   { name: 'SNSマーケティング', href: '/services/sns-marketing', description: 'SNS運用・広告・KOL活用' },
 ]
 

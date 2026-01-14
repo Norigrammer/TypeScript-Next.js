@@ -83,7 +83,7 @@ export default function SuitsPage() {
       />
 
       {/* Order Types */}
-      <section className="py-16 md:py-24">
+      <section className="py-10 md:py-24">
         <div className="container mx-auto px-4">
           <SectionHeader
             subtitle="Order Types"
@@ -122,7 +122,7 @@ export default function SuitsPage() {
       </section>
 
       {/* Features */}
-      <section className="bg-muted/50 py-16 md:py-24">
+      <section className="bg-muted/50 py-10 md:py-24">
         <div className="container mx-auto px-4">
           <SectionHeader
             subtitle="Why Choose Us"
@@ -154,7 +154,7 @@ export default function SuitsPage() {
       {/* CTA */}
       <CtaSection
         title="まずはお問い合わせから"
-        description="プロのスタイリストがあなたに最適な一着をご提案します"
+        description="プロのスタイリストがあなたに最適な一着をご提案します。"
         primaryCta={{ text: 'お問い合わせ', href: '/contact?type=suits-reservation' }}
       />
     </>

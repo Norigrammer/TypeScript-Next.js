@@ -25,7 +25,7 @@ const services = [
     description: '上質な素材と確かな技術で、あなただけの一着をお仕立てします。',
     features: ['オーダーメイド対応', '採寸サービス', 'サイズ保証'],
     href: '/services/suits',
-    ctaText: '来店予約',
+    ctaText: '無料相談',
     icon: Briefcase,
     backgroundImage: '/images/home/home_backimage_suits.jpg',
   },
@@ -55,21 +55,19 @@ export default function HomePage() {
       {/* Hero Section */}
       <Hero
         subtitle="一美Group"
-        title="ビジネスと生活を豊かにする4つの事業"
+        title={"ビジネスと生活を豊かにする\n4つの事業"}
         description={"不動産・スーツ販売・AIコンサルティング・SNSマーケティング。\nそれぞれの分野で培った専門性を活かし、お客様の課題解決に貢献します。"}
         primaryCta={{ text: 'お問い合わせ', href: '/contact' }}
-        secondaryCta={{ text: '事業一覧を見る', href: '/services' }}
-        wideButtons
         backgroundImage="/images/home/home_backimage_main.jpg"
       />
 
       {/* Services Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-10 md:py-24">
         <div className="container mx-auto px-4">
           <SectionHeader
             subtitle="Our Services"
             title="4つの事業領域"
-            description={"各分野のプロフェッショナルが\nお客様のニーズに合わせた最適なソリューションを提供します。"}
+            description="各分野のプロフェッショナルがお客様のニーズに合わせた最適なソリューションを提供します。"
           />
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {services.map((service, index) => (
@@ -80,7 +78,7 @@ export default function HomePage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="bg-muted/50 py-16 md:py-24">
+      <section className="bg-muted/50 py-10 md:py-24">
         <div className="container mx-auto px-4">
           <SectionHeader
             subtitle="Why Choose Us"

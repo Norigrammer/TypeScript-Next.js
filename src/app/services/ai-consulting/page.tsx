@@ -176,7 +176,7 @@ export default function AiConsultingPage() {
       />
 
       {/* Capabilities Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-10 md:py-24">
         <div className="container mx-auto px-4">
           <SectionHeader
             title="サービス内容"
@@ -212,7 +212,7 @@ export default function AiConsultingPage() {
       </section>
 
       {/* Process Section */}
-      <section className="bg-muted/50 py-16 md:py-24">
+      <section className="bg-muted/50 py-10 md:py-24">
         <div className="container mx-auto px-4">
           <SectionHeader
             title="導入の流れ"
@@ -237,7 +237,7 @@ export default function AiConsultingPage() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-10 md:py-24">
         <div className="container mx-auto px-4">
           <SectionHeader
             title="業種別AI活用シーン"
@@ -272,7 +272,7 @@ export default function AiConsultingPage() {
       </section>
 
       {/* Pricing Section */}
-      <section className="bg-muted/50 py-16 md:py-24">
+      <section className="bg-muted/50 py-10 md:py-24">
         <div className="container mx-auto px-4">
           <SectionHeader
             title="料金プラン"
@@ -323,16 +323,16 @@ export default function AiConsultingPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-10 md:py-24">
         <div className="container mx-auto px-4">
-          <FaqSection faqs={faqs} />
+          <FaqSection title="よくあるご質問" faqs={faqs} />
         </div>
       </section>
 
       {/* CTA Section */}
       <CtaSection
         title="AI導入について相談してみませんか?"
-        description="お客様のビジネスにAIがどう活用できるか、まずはお気軽にご相談ください"
+        description="お客様のビジネスにAIがどう活用できるか、まずはお気軽にご相談ください。"
         primaryCta={{ text: '無料相談を予約', href: '/contact?type=consulting' }}
       />
     </>

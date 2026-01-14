@@ -22,7 +22,7 @@ interface FaqSectionProps {
 
 export function FaqSection({ title, description, faqs }: FaqSectionProps) {
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-10 md:py-24">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -32,12 +32,12 @@ export function FaqSection({ title, description, faqs }: FaqSectionProps) {
           className="mx-auto max-w-3xl"
         >
           {(title || description) && (
-            <div className="mb-12 text-center">
+            <div className="mb-8 text-center sm:mb-12">
               {title && (
-                <h2 className="mb-4 text-3xl font-bold md:text-4xl">{title}</h2>
+                <h2 className="mb-3 text-2xl font-bold sm:mb-4 sm:text-3xl md:text-4xl">{title}</h2>
               )}
               {description && (
-                <p className="text-lg text-muted-foreground">{description}</p>
+                <p className="text-sm text-muted-foreground sm:text-base md:text-lg">{description}</p>
               )}
             </div>
           )}

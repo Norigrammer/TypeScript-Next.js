@@ -35,9 +35,9 @@ export function Hero({
   backgroundImage,
 }: HeroProps) {
   const buttonContainerClass = wideButtons
-    ? 'flex flex-col items-center justify-center gap-4 w-full max-w-md mx-auto sm:flex-row'
+    ? 'flex flex-row items-center justify-center gap-2 w-full max-w-md mx-auto sm:gap-4'
     : 'flex flex-col items-center justify-center gap-4 sm:flex-row'
-  const baseButtonClass = wideButtons ? 'flex-1 py-6 text-base' : ''
+  const baseButtonClass = wideButtons ? 'flex-1 text-xs px-3 py-2 sm:text-base sm:px-4 sm:py-6' : ''
   const primaryButtonClass = backgroundImage
     ? baseButtonClass + ' shadow-lg'
     : baseButtonClass
@@ -80,11 +80,11 @@ export function Hero({
               {subtitle}
             </motion.p>
           )}
-          <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
+          <h1 className="mb-4 whitespace-pre-line text-2xl font-bold tracking-tight sm:mb-6 sm:text-4xl md:text-5xl lg:text-6xl">
             {title}
           </h1>
           {description && (
-            <p className="mb-8 whitespace-pre-line text-lg text-muted-foreground md:text-xl">
+            <p className="mb-6 text-sm leading-relaxed text-muted-foreground sm:mb-8 sm:text-base md:whitespace-pre-line md:text-lg">
               {description}
             </p>
           )}

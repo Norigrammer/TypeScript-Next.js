@@ -1,6 +1,14 @@
+'use client'
+
 import React from 'react'
 import Link from 'next/link'
 import { Mail, Youtube } from 'lucide-react'
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion'
 
 const footerLinks = {
   services: [
@@ -22,13 +30,21 @@ const footerLinks = {
   ],
 }
 
+const footerSections = [
+  { title: '事業内容', links: footerLinks.services },
+  { title: '企業情報', links: footerLinks.company },
+  { title: 'サポート', links: footerLinks.support },
+  { title: '法務情報', links: footerLinks.legal },
+]
+
 export function Footer() {
   return (
     <footer className="border-t bg-muted/50">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        {/* Desktop Layout */}
+        <div className="hidden gap-8 md:grid md:grid-cols-2 lg:grid-cols-5">
           {/* Company Info */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-2">
             <Link href="/" className="text-xl font-bold">
               一美Group
             </Link>
@@ -39,10 +55,10 @@ export function Footer() {
             <div className="mt-6 space-y-3">
               <div className="flex items-center space-x-3 text-sm">
                 <Mail className="h-4 w-4 text-muted-foreground" />
-                <span>info@kazumi.co.jp</span>
+                <span>info@hitomi.co.jp</span>
               </div>
               <a
-                href="https://youtube.com/@kazumi-company"
+                href="https://youtube.com/@hitomi-company"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-3 text-sm transition-colors hover:text-primary"
@@ -53,69 +69,78 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Services */}
-          <div>
-            <h3 className="font-semibold">事業内容</h3>
-            <ul className="mt-4 space-y-2">
-              {footerLinks.services.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          {/* Links Sections */}
+          {footerSections.map((section) => (
+            <div key={section.title}>
+              <h3 className="font-semibold">{section.title}</h3>
+              <ul className="mt-4 space-y-2">
+                {section.links.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile Layout */}
+        <div className="md:hidden">
+          {/* Company Info */}
+          <div className="mb-6">
+            <Link href="/" className="text-xl font-bold">
+              一美Group
+            </Link>
+            <p className="mt-4 text-sm text-muted-foreground">
+              不動産・スーツ販売・AIコンサルティング・SNSマーケティングの4つの事業を通じて、
+              お客様のビジネスと生活を豊かにします。
+            </p>
+            <div className="mt-6 space-y-3">
+              <div className="flex items-center space-x-3 text-sm">
+                <Mail className="h-4 w-4 text-muted-foreground" />
+                <span>info@hitomi.co.jp</span>
+              </div>
+              <a
+                href="https://youtube.com/@hitomi-company"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-3 text-sm transition-colors hover:text-primary"
+              >
+                <Youtube className="h-4 w-4 text-muted-foreground" />
+                <span>YouTube</span>
+              </a>
+            </div>
           </div>
 
-          {/* Company */}
-          <div>
-            <h3 className="font-semibold">企業情報</h3>
-            <ul className="mt-4 space-y-2">
-              {footerLinks.company.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Support & Legal */}
-          <div>
-            <h3 className="font-semibold">サポート</h3>
-            <ul className="mt-4 space-y-2">
-              {footerLinks.support.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <h3 className="mt-6 font-semibold">法務情報</h3>
-            <ul className="mt-4 space-y-2">
-              {footerLinks.legal.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Accordion Links */}
+          <Accordion type="multiple" className="w-full">
+            {footerSections.map((section) => (
+              <AccordionItem key={section.title} value={section.title}>
+                <AccordionTrigger className="text-sm font-semibold hover:no-underline">
+                  {section.title}
+                </AccordionTrigger>
+                <AccordionContent>
+                  <ul className="space-y-2">
+                    {section.links.map((link) => (
+                      <li key={link.name}>
+                        <Link
+                          href={link.href}
+                          className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                        >
+                          {link.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
 
         {/* Bottom */}

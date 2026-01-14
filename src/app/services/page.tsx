@@ -72,7 +72,7 @@ export default function ServicesPage() {
       />
 
       {/* Services Grid */}
-      <section className="py-16 md:py-24">
+      <section className="py-10 md:py-24">
         <div className="container mx-auto px-4">
           <div className="grid gap-8 lg:grid-cols-2">
             {services.map((service) => {
@@ -114,7 +114,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-muted/50 py-16 md:py-24">
+      <section className="bg-muted/50 py-10 md:py-24">
         <div className="container mx-auto px-4 text-center">
           <h2 className="mb-4 text-3xl font-bold">どの事業についてお問い合わせですか？</h2>
           <p className="mb-8 text-muted-foreground">

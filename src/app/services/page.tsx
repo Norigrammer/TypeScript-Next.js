@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Briefcase, Building2, TrendingUp, Share2, ArrowRight } from 'lucide-react'
+import { Briefcase, Building2, Brain, Share2, ArrowRight } from 'lucide-react'
 import { Hero } from '@/components/sections/hero'
 import { Button } from '@/components/ui/button'
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card'
 
 export const metadata: Metadata = {
   title: '事業一覧',
-  description: '一美Groupの4つの事業領域をご紹介します。不動産、スーツ販売、コンサルティング、SNSマーケティング。',
+  description: '一美Groupの4つの事業領域をご紹介します。不動産・スーツ販売・AIコンサルティング・SNSマーケティング。',
 }
 
 const services = [
@@ -27,7 +27,7 @@ const services = [
     title: 'スーツ販売',
     description: '上質な素材と確かな技術で、あなただけの一着をお仕立てします。既製品からフルオーダーまで、幅広いニーズに対応。',
     features: [
-      'オーダーメイドスーツ',
+      'オーダーメイド対応',
       'パターンオーダー',
       '採寸サービス',
       'サイズ保証・補正対応',
@@ -37,16 +37,16 @@ const services = [
     icon: Briefcase,
   },
   {
-    title: 'コンサルティング',
-    description: '経営戦略から業務改善、DX推進まで、ビジネスの成長をトータルでサポートします。',
+    title: 'AIコンサルティング',
+    description: 'ChatGPTや機械学習を活用したAI導入支援、および、業務自動化から生成AI活用まで、AIでビジネスを変革します。',
     features: [
-      '経営戦略立案',
-      '業務プロセス改善',
-      'DX・デジタル化支援',
+      'AI戦略策定',
+      '業務自動化・効率化',
+      '生成AI導入支援',
     ],
-    href: '/services/consulting',
+    href: '/services/ai-consulting',
     cta: '詳しく見る',
-    icon: TrendingUp,
+    icon: Brain,
   },
   {
     title: 'SNSマーケティング',

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Youtube, Mail } from 'lucide-react'
 import { Hero } from '@/components/sections/hero'
@@ -14,29 +15,29 @@ export const metadata: Metadata = {
 
 const companyInfo = [
   { label: '会社名', value: '一美Group' },
-  { label: '設立', value: '2024年' },
+  { label: '設立', value: '2025年3月31日' },
   { label: '代表取締役', value: '渡辺 翔太' },
   { label: '従業員数', value: '4名' },
-  { label: '事業内容', value: '不動産事業、スーツ販売、コンサルティング、SNSマーケティング' },
+  { label: '事業内容', value: '不動産事業、スーツ販売、AIコンサルティング、SNSマーケティング' },
   { label: 'メール', value: 'info@kazumi.co.jp' },
 ]
 
 const values = [
   {
-    title: '誠実',
-    description: 'お客様、パートナー、社会に対して常に誠実であり続けます',
+    title: '情熱',
+    description: '何事にも本気で向き合い、\n熱意を持って行動します。',
   },
   {
-    title: '挑戦',
-    description: '現状に満足せず、常に新しい価値創造に挑戦し続けます',
+    title: 'スピード',
+    description: '素早い判断と行動で、お客様の期待に応えます。',
   },
   {
-    title: '成長',
-    description: '個人と組織の成長を通じて、社会に貢献します',
+    title: '柔軟性',
+    description: '変化を恐れず、新しいアイデアを柔軟に取り入れます。',
   },
   {
-    title: '協創',
-    description: 'お客様と共に考え、共に創り、共に成長します',
+    title: 'チームワーク',
+    description: '少数精鋭だからこそ、互いを信頼し支え合います。',
   },
 ]
 
@@ -55,6 +56,7 @@ const team = [
     name: '下川 大慶',
     role: '取締役 CTO',
     description: '技術部門を統括。システム・インフラ全般を担当。',
+    image: '/images/company-information/company-information_shimogawa.jpg',
   },
   {
     name: '平尾 拳成',
@@ -69,20 +71,35 @@ export default function CompanyPage() {
       <Hero
         subtitle="Company"
         title="会社情報"
-        description="一美Groupについてご紹介します"
+        description="一美Groupについてご紹介します。"
+        backgroundImage="/images/company-information/company-information_main.jpg"
       />
 
-      {/* Mission & Vision */}
+      {/* Company Philosophy */}
       <section className="py-16 md:py-24">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="mb-8 text-3xl font-bold">企業理念</h2>
+            <p className="mb-12 text-xl leading-relaxed text-muted-foreground">
+              「誰かのために、社会のために。」
+            </p>
+            <p className="whitespace-pre-line text-muted-foreground">
+              {"私たち一美グループは若手を中心としたチームで、\n不動産事業・スーツ販売・AIコンサルティング・SNSマーケティング\nこの4つの事業を通じて、\nお客様一人ひとりと真摯に向き合います。"}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission & Vision */}
+      <section className="bg-muted/50 py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-8 text-3xl font-bold">経営理念</h2>
             <p className="mb-12 text-xl leading-relaxed text-muted-foreground">
-              「人と企業の可能性を拓く」
+              「一人ひとりの幸せが、社会を変える。」
             </p>
-            <p className="text-muted-foreground">
-              私たち一美Groupは、不動産、スーツ販売、コンサルティング、SNSマーケティングの4つの事業を通じて、
-              お客様一人ひとりの可能性を最大限に引き出し、ビジネスと生活の両面から豊かな未来の実現をサポートします。
+            <p className="whitespace-pre-line text-muted-foreground">
+              {"人の可能性を最大限に引き出し、\nビジネスの成功だけでなく、\n日常生活そのものが豊かになる未来の実現を支援します。"}
             </p>
           </div>
         </div>
@@ -123,7 +140,7 @@ export default function CompanyPage() {
                   <tbody>
                     {companyInfo.map((item, index) => (
                       <tr key={item.label} className={index !== companyInfo.length - 1 ? 'border-b' : ''}>
-                        <th className="w-1/3 bg-muted/50 p-4 text-left font-medium">{item.label}</th>
+                        <th className="w-1/4 bg-muted/50 p-4 text-left font-medium">{item.label}</th>
                         <td className="p-4">{item.value}</td>
                       </tr>
                     ))}
@@ -162,7 +179,19 @@ export default function CompanyPage() {
             {team.map((member) => (
               <Card key={member.name}>
                 <CardContent className="p-6 text-center">
-                  <div className="mx-auto mb-4 h-24 w-24 rounded-full bg-muted" />
+                  {member.image ? (
+                    <div className="mx-auto mb-4 h-24 w-24 overflow-hidden rounded-full">
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        width={96}
+                        height={96}
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                  ) : (
+                    <div className="mx-auto mb-4 h-24 w-24 rounded-full bg-muted" />
+                  )}
                   <h3 className="font-bold">{member.name}</h3>
                   <p className="mb-2 text-sm text-primary">{member.role}</p>
                   <p className="text-sm text-muted-foreground">{member.description}</p>

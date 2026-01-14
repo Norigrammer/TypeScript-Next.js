@@ -3,7 +3,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Briefcase, Building2, TrendingUp, Share2, ArrowRight, CheckCircle } from 'lucide-react'
+import { Briefcase, Building2, Brain, Share2, ArrowRight, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Hero } from '@/components/sections/hero'
 import { ServiceCard } from '@/components/sections/service-card'
@@ -18,7 +18,7 @@ const services = [
     href: '/services/real-estate',
     ctaText: '物件を探す',
     icon: Building2,
-    backgroundImage: '/images/home_backimage_real-estate.jpg',
+    backgroundImage: '/images/home/home_backimage_real-estate.jpg',
   },
   {
     title: 'スーツ販売',
@@ -27,16 +27,16 @@ const services = [
     href: '/services/suits',
     ctaText: '来店予約',
     icon: Briefcase,
-    backgroundImage: '/images/home_backimage_suits.jpg',
+    backgroundImage: '/images/home/home_backimage_suits.jpg',
   },
   {
-    title: 'コンサルティング',
-    description: '戦略立案から実行支援まで、ビジネスの成長をサポートします。',
-    features: ['経営戦略', '業務改善', 'DX推進'],
-    href: '/services/consulting',
+    title: 'AIコンサルティング',
+    description: 'ChatGPTや機械学習を活用したAI導入支援。業務自動化を支援します。',
+    features: ['AI戦略策定', '業務自動化', '生成AI導入'],
+    href: '/services/ai-consulting',
     ctaText: '無料相談',
-    icon: TrendingUp,
-    backgroundImage: '/images/home_backimage_consulting.jpg',
+    icon: Brain,
+    backgroundImage: '/images/home/home_backimage_aiconsulting.jpg',
   },
   {
     title: 'SNSマーケティング',
@@ -45,7 +45,7 @@ const services = [
     href: '/services/sns-marketing',
     ctaText: '無料診断',
     icon: Share2,
-    backgroundImage: '/images/home_backimage_sns.jpg',
+    backgroundImage: '/images/home/home_backimage_sns.jpg',
   },
 ]
 
@@ -56,11 +56,11 @@ export default function HomePage() {
       <Hero
         subtitle="一美Group"
         title="ビジネスと生活を豊かにする4つの事業"
-        description={"不動産、スーツ販売、コンサルティング、SNSマーケティング。\nそれぞれの分野で培った専門性を活かし、お客様の課題解決に貢献します。"}
+        description={"不動産・スーツ販売・AIコンサルティング・SNSマーケティング。\nそれぞれの分野で培った専門性を活かし、お客様の課題解決に貢献します。"}
         primaryCta={{ text: 'お問い合わせ', href: '/contact' }}
         secondaryCta={{ text: '事業一覧を見る', href: '/services' }}
         wideButtons
-        backgroundImage="/images/home_backimage_main.jpg"
+        backgroundImage="/images/home/home_backimage_main.jpg"
       />
 
       {/* Services Section */}

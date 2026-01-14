@@ -6,7 +6,7 @@ const footerLinks = {
   services: [
     { name: '不動産事業', href: '/services/real-estate' },
     { name: 'スーツ販売', href: '/services/suits' },
-    { name: 'コンサルティング', href: '/services/consulting' },
+    { name: 'AIコンサルティング', href: '/services/ai-consulting' },
     { name: 'SNSマーケティング', href: '/services/sns-marketing' },
   ],
   company: [
@@ -33,7 +33,7 @@ export function Footer() {
               一美Group
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
-              不動産、スーツ販売、コンサルティング、SNSマーケティングの4つの事業を通じて、
+              不動産・スーツ販売・AIコンサルティング・SNSマーケティングの4つの事業を通じて、
               お客様のビジネスと生活を豊かにします。
             </p>
             <div className="mt-6 space-y-3">

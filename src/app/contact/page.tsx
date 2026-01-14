@@ -13,7 +13,7 @@ const inquiryTypes = [
   { value: 'suits-reservation', label: 'スーツ販売 - 来店予約' },
   { value: 'suits-inquiry', label: 'スーツ販売 - お問い合わせ' },
   { value: 'real-estate', label: '不動産 - 物件のお問い合わせ' },
-  { value: 'consulting', label: 'コンサルティング - 無料相談' },
+  { value: 'consulting', label: 'AIコンサルティング - 無料相談' },
   { value: 'sns-marketing', label: 'SNSマーケティング - お問い合わせ' },
   { value: 'recruit', label: '採用に関するお問い合わせ' },
   { value: 'other', label: 'その他' },

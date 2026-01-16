@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card'
 
 export const metadata: Metadata = {
   title: '利用規約',
-  description: '一美株式会社のウェブサイト利用規約をご確認ください。',
+  description: '一美Groupのウェブサイト利用規約をご確認ください。',
 }
 
 export default function TermsPage() {
@@ -15,15 +15,15 @@ export default function TermsPage() {
         title="利用規約"
       />
 
-      <section className="py-16 md:py-24">
+      <section className="py-10 md:py-24">
         <div className="container mx-auto px-4">
           <Card className="mx-auto max-w-4xl">
             <CardContent className="prose prose-sm max-w-none p-8">
-              <p className="text-sm text-muted-foreground">最終更新日: 2024年1月1日</p>
+              <p className="text-sm text-muted-foreground">最終更新日: 2026年3月31日</p>
 
               <h2 className="mt-8 text-xl font-bold">第1条（適用範囲）</h2>
               <p>
-                本利用規約（以下「本規約」）は、一美株式会社（以下「当社」）が
+                本利用規約（以下「本規約」）は、一美Group（以下「当社」）が
                 運営するウェブサイト（以下「本サイト」）の利用条件を定めるものです。
               </p>
 
@@ -53,8 +53,8 @@ export default function TermsPage() {
               <h2 className="mt-8 text-xl font-bold">第6条（お問い合わせ）</h2>
               <p>本規約に関するお問い合わせは、以下までご連絡ください：</p>
               <p>
-                一美株式会社<br />
-                Email: info@kazumi.co.jp
+                一美Group<br />
+                Email: info@hitomi.co.jp
               </p>
             </CardContent>
           </Card>

@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import { Mail, Youtube, Send } from 'lucide-react'
+import { Mail, Youtube, Send, ChevronDown } from 'lucide-react'
 import { Hero } from '@/components/sections/hero'
 import { Button } from '@/components/ui/button'
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card'
@@ -10,10 +10,10 @@ import { Textarea } from '@/components/ui/textarea'
 import { Label } from '@/components/ui/label'
 
 const inquiryTypes = [
-  { value: 'suits-reservation', label: 'スーツ販売 - 来店予約' },
+  { value: 'suits-reservation', label: 'スーツ販売 - 無料相談' },
   { value: 'suits-inquiry', label: 'スーツ販売 - お問い合わせ' },
   { value: 'real-estate', label: '不動産 - 物件のお問い合わせ' },
-  { value: 'consulting', label: 'コンサルティング - 無料相談' },
+  { value: 'consulting', label: 'AIコンサルティング - 無料相談' },
   { value: 'sns-marketing', label: 'SNSマーケティング - お問い合わせ' },
   { value: 'recruit', label: '採用に関するお問い合わせ' },
   { value: 'other', label: 'その他' },
@@ -31,16 +31,41 @@ export default function ContactPage() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [error, setError] = useState('')
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setError('')
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000))
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          inquiryType: formData.inquiryType,
+          company: formData.company,
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+        }),
+      })
 
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || '送信に失敗しました。')
+      }
+
+      setIsSubmitted(true)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : '送信に失敗しました。しばらく経ってから再度お試しください。')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   if (isSubmitted) {
@@ -50,7 +75,7 @@ export default function ContactPage() {
           subtitle="Contact"
           title="お問い合わせ"
         />
-        <section className="py-16 md:py-24">
+        <section className="py-10 md:py-24">
           <div className="container mx-auto px-4">
             <Card className="mx-auto max-w-2xl">
               <CardContent className="p-8 text-center">
@@ -76,10 +101,10 @@ export default function ContactPage() {
       <Hero
         subtitle="Contact"
         title="お問い合わせ"
-        description="各種お問い合わせ、ご相談はこちらからお気軽にご連絡ください"
+        description="各種お問い合わせ、ご相談、エントリーはこちらからお気軽にご連絡ください。"
       />
 
-      <section className="py-16 md:py-24">
+      <section className="py-1 md:py-24">
         <div className="container mx-auto px-4">
           <div className="grid gap-8 lg:grid-cols-3">
             {/* Contact Info */}
@@ -96,7 +121,7 @@ export default function ContactPage() {
                     <Mail className="mt-1 h-5 w-5 text-primary" />
                     <div>
                       <p className="font-medium">メール</p>
-                      <p className="text-muted-foreground">info@kazumi.co.jp</p>
+                      <p className="text-muted-foreground">info@hitomi.co.jp</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -104,12 +129,12 @@ export default function ContactPage() {
                     <div>
                       <p className="font-medium">YouTube</p>
                       <a
-                        href="https://youtube.com/@kazumi-company"
+                        href="https://youtube.com/@hitomi-company"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-muted-foreground transition-colors hover:text-primary"
                       >
-                        @kazumi-company
+                        @hitomi-company
                       </a>
                     </div>
                   </div>
@@ -130,20 +155,25 @@ export default function ContactPage() {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="space-y-2">
                       <Label htmlFor="inquiryType">お問い合わせ種別 *</Label>
-                      <select
-                        id="inquiryType"
-                        value={formData.inquiryType}
-                        onChange={(e) => setFormData({ ...formData, inquiryType: e.target.value })}
-                        required
-                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                      >
-                        <option value="">選択してください</option>
-                        {inquiryTypes.map((type) => (
-                          <option key={type.value} value={type.value}>
-                            {type.label}
-                          </option>
-                        ))}
-                      </select>
+                      <div className="relative">
+                        <select
+                          id="inquiryType"
+                          value={formData.inquiryType}
+                          onChange={(e) => setFormData({ ...formData, inquiryType: e.target.value })}
+                          required
+                          className="flex h-10 w-full appearance-none rounded-md border border-input bg-background pl-3 pr-12 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                        >
+                          <option value="">選択してください</option>
+                          {inquiryTypes.map((type) => (
+                            <option key={type.value} value={type.value}>
+                              {type.label}
+                            </option>
+                          ))}
+                        </select>
+                        <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-muted-foreground">
+                          <ChevronDown className="h-4 w-4" aria-hidden="true" />
+                        </span>
+                      </div>
                     </div>
 
                     <div className="grid gap-4 md:grid-cols-2">
@@ -220,6 +250,12 @@ export default function ContactPage() {
                         に同意します *
                       </Label>
                     </div>
+
+                    {error && (
+                      <div className="rounded-md bg-destructive/10 p-4 text-sm text-destructive">
+                        {error}
+                      </div>
+                    )}
 
                     <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
                       {isSubmitting ? '送信中...' : '送信する'}

@@ -7,9 +7,9 @@ import { Menu, X, ChevronDown } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const services = [
-  { name: 'スーツ販売', href: '/services/suits', description: '上質なオーダーメイドスーツ' },
   { name: '不動産事業', href: '/services/real-estate', description: '売買・賃貸・管理の総合支援' },
-  { name: 'コンサルティング', href: '/services/consulting', description: '戦略立案から実行支援まで' },
+  { name: 'スーツ販売', href: '/services/suits', description: '上質なオーダーメイドスーツ' },
+  { name: 'AIコンサルティング', href: '/services/ai-consulting', description: 'ChatGPT活用・業務自動化支援' },
   { name: 'SNSマーケティング', href: '/services/sns-marketing', description: 'SNS運用・広告・KOL活用' },
 ]
 
@@ -29,7 +29,7 @@ export function Header() {
       <nav className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
-          <span className="text-xl font-bold">一美株式会社</span>
+          <span className="text-xl font-bold">一美Group</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -42,7 +42,7 @@ export function Header() {
                   onMouseEnter={() => setServicesOpen(true)}
                   onMouseLeave={() => setServicesOpen(false)}
                 >
-                  <button className="flex items-center space-x-1 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">
+                  <button className="flex items-center space-x-1 text-base font-medium text-muted-foreground transition-colors hover:text-foreground">
                     <span>{item.name}</span>
                     <ChevronDown className="h-4 w-4" />
                   </button>
@@ -74,7 +74,7 @@ export function Header() {
               ) : (
                 <Link
                   href={item.href}
-                  className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                  className="text-base font-medium text-muted-foreground transition-colors hover:text-foreground"
                 >
                   {item.name}
                 </Link>

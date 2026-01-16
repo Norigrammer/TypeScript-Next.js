@@ -3,7 +3,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Briefcase, Building2, TrendingUp, Share2, ArrowRight, CheckCircle } from 'lucide-react'
+import { Briefcase, Building2, Brain, Share2, ArrowRight, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Hero } from '@/components/sections/hero'
 import { ServiceCard } from '@/components/sections/service-card'
@@ -12,28 +12,31 @@ import { SectionHeader } from '@/components/sections/section-header'
 
 const services = [
   {
-    title: 'スーツ販売',
-    description: '上質な素材と確かな技術で、あなただけの一着をお仕立てします。',
-    features: ['オーダーメイド対応', '採寸サービス', 'サイズ保証'],
-    href: '/services/suits',
-    ctaText: '来店予約',
-    icon: Briefcase,
-  },
-  {
     title: '不動産事業',
     description: '売買・賃貸・管理まで、不動産のあらゆるニーズにお応えします。',
     features: ['物件売買サポート', '賃貸管理', '投資相談'],
     href: '/services/real-estate',
     ctaText: '物件を探す',
     icon: Building2,
+    backgroundImage: '/images/home/home_backimage_real-estate.jpg',
   },
   {
-    title: 'コンサルティング',
-    description: '戦略立案から実行支援まで、ビジネスの成長をサポートします。',
-    features: ['経営戦略', '業務改善', 'DX推進'],
-    href: '/services/consulting',
+    title: 'スーツ販売',
+    description: '上質な素材と確かな技術で、あなただけの一着をお仕立てします。',
+    features: ['オーダーメイド対応', '採寸サービス', 'サイズ保証'],
+    href: '/services/suits',
     ctaText: '無料相談',
-    icon: TrendingUp,
+    icon: Briefcase,
+    backgroundImage: '/images/home/home_backimage_suits.jpg',
+  },
+  {
+    title: 'AIコンサルティング',
+    description: 'ChatGPTや機械学習を活用したAI導入支援。業務自動化を支援します。',
+    features: ['AI戦略策定', '業務自動化', '生成AI導入'],
+    href: '/services/ai-consulting',
+    ctaText: '無料相談',
+    icon: Brain,
+    backgroundImage: '/images/home/home_backimage_aiconsulting.jpg',
   },
   {
     title: 'SNSマーケティング',
@@ -42,6 +45,7 @@ const services = [
     href: '/services/sns-marketing',
     ctaText: '無料診断',
     icon: Share2,
+    backgroundImage: '/images/home/home_backimage_sns.jpg',
   },
 ]
 
@@ -50,20 +54,20 @@ export default function HomePage() {
     <>
       {/* Hero Section */}
       <Hero
-        subtitle="一美株式会社"
-        title="ビジネスと生活を豊かにする4つの事業"
-        description="スーツ販売、不動産、コンサルティング、SNSマーケティング。それぞれの分野で培った専門性を活かし、お客様の課題解決に貢献します。"
+        subtitle="一美Group"
+        title={"ビジネスと生活を豊かにする\n4つの事業"}
+        description={"不動産・スーツ販売・AIコンサルティング・SNSマーケティング。\nそれぞれの分野で培った専門性を活かし、お客様の課題解決に貢献します。"}
         primaryCta={{ text: 'お問い合わせ', href: '/contact' }}
-        secondaryCta={{ text: '事業一覧を見る', href: '/services' }}
+        backgroundImage="/images/home/home_backimage_main.jpg"
       />
 
       {/* Services Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-10 md:py-24">
         <div className="container mx-auto px-4">
           <SectionHeader
             subtitle="Our Services"
             title="4つの事業領域"
-            description="各分野のプロフェッショナルが、お客様のニーズに合わせた最適なソリューションを提供します。"
+            description="各分野のプロフェッショナルがお客様のニーズに合わせた最適なソリューションを提供します。"
           />
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {services.map((service, index) => (
@@ -74,12 +78,12 @@ export default function HomePage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="bg-muted/50 py-16 md:py-24">
+      <section className="bg-muted/50 py-10 md:py-24">
         <div className="container mx-auto px-4">
           <SectionHeader
             subtitle="Why Choose Us"
             title="選ばれる理由"
-            description="一美株式会社が選ばれる理由をご紹介します。"
+            description="一美Groupが選ばれる理由をご紹介します。"
           />
           <div className="grid gap-8 md:grid-cols-3">
             {[

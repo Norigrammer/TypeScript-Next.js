@@ -1,6 +1,9 @@
-# Hitomi Company Website
+<h1 align="center">一美Group Website</h1>
 
 一美Groupの公式ウェブサイトです。4つの主要事業（スーツ販売、不動産、AIコンサルティング、SNSマーケティング）を紹介し、お客様の多様なニーズに応えるサービスを提供しています。
+
+参考画像: 一美Group Webサイト - トップページ<br>
+<img width="647" height="540" align="center" alt="一美GroupWebサイト_トップページ" src="https://github.com/user-attachments/assets/79a82301-0133-4950-b47e-381d0cf0f81e" />
 
 ## 技術スタック
 
@@ -133,7 +136,3 @@ npm run start
 ## ライセンス
 
 このプロジェクトは非公開です。無断での複製・配布を禁じます。
-
----
-
-**一美Group** - ビジネスと生活を豊かにする4つの事業

@@ -46,15 +46,6 @@
 - CTA: 無料相談/採寸予約/問い合わせ
 - 追加ページ: カタログ（/services/suits/catalog）、店舗情報（/services/suits/stores）、FAQ、サイズガイド
 
-#### 不動産事業（/services/real-estate）
-
-- 価値: 売買/賃貸/管理/投資の総合支援、地域特化・査定/稼働率改善実績
-- コンテンツ: 物件検索（種別/予算/エリア）、物件詳細（写真/間取/周辺/ローン/内見予約）
-- オーナー向け: 査定依頼/管理メニュー（入居付け/修繕/レポート）
-- 法務/信頼: 宅建業免許番号、個人情報・反社排除、重要事項説明の方針
-- CTA: 物件問い合わせ/内見予約/査定依頼/管理相談
-- 追加ページ: 物件一覧（/services/real-estate/listings）、オーナー（/services/real-estate/owners）、- 管理（/services/real-estate/management）、FAQ
-
 #### コンサルティング（/services/consulting）
 
 - 価値: 戦略/業務改善/デジタル/人材開発などのケイパビリティと効果（数値）
@@ -63,15 +54,6 @@
 - 提供プラン: フィックス/リテーナー/アドバイザリー
 - CTA: 無料相談/資料請求/ワークショップ依頼
 - 追加ページ: 能力領域（/services/consulting/capabilities）、事例（/cases?tag=consulting）、FAQ
-
-#### SNSマーケティング（/services/sns-marketing）
-
-- 価値: Instagram/TikTok/Xの運用代行・広告・UGC制作・KOL活用、KPI設計
-- コンテンツ: 成果（フォロワー増/エンゲージ/CV）、運用体制、クリエイティブサンプル
-- プラン: スターター/グロース/パフォーマンス（投稿頻度・制作点数・レポート・広告運用有無）
-- 実績: Before/After、ケーススタディ、業界別サンプル
-- CTA: 無料診断/提案依頼/資料請求
-- 追加ページ: ポートフォリオ（/services/sns-marketing/portfolio）、プラン詳細（/services/- sns-marketing/packages）、FAQ
 
 #### 横断ページ
 

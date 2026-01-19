@@ -9,7 +9,7 @@ import { CtaSection } from '@/components/sections/cta-section'
 import { SectionHeader } from '@/components/sections/section-header'
 
 export const metadata: Metadata = {
-  title: 'AIコンサルティング',
+  title: 'AI',
   description: 'ChatGPTや機械学習を活用したAI導入支援。\n業務自動化から生成AI活用まで、AIでビジネスを変革します。',
 }
 
@@ -164,15 +164,15 @@ const faqs = [
   },
 ]
 
-export default function AiConsultingPage() {
+export default function AiPage() {
   return (
     <>
       <Hero
-        subtitle="AI Consulting"
-        title="AIコンサルティング"
+        subtitle="AI"
+        title={"AIソリューションで\nビジネスを変革"}
         description={"ChatGPTや機械学習を活用したAI導入支援。\n業務自動化から生成AI活用まで、AIでビジネスを変革します。"}
         primaryCta={{ text: '無料相談', href: '/contact?type=consulting' }}
-        backgroundImage="/images/ai-consulting/ai-consulting_main.jpg"
+        backgroundImage="/images/ai/ai_main.jpg"
       />
 
       {/* Capabilities Section */}
@@ -333,7 +333,7 @@ export default function AiConsultingPage() {
       <CtaSection
         title="AI導入について相談してみませんか?"
         description="お客様のビジネスにAIがどう活用できるか、まずはお気軽にご相談ください。"
-        primaryCta={{ text: '無料相談を予約', href: '/contact?type=consulting' }}
+        primaryCta={{ text: 'お問い合わせ', href: '/contact?type=consulting' }}
       />
     </>
   )

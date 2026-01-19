@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { Mail, Youtube } from 'lucide-react'
+import { Mail } from 'lucide-react'
 import {
   Accordion,
   AccordionContent,
@@ -12,10 +12,8 @@ import {
 
 const footerLinks = {
   services: [
-    { name: '不動産事業', href: '/services/real-estate' },
+    { name: 'AI', href: '/services/ai' },
     { name: 'スーツ販売', href: '/services/suits' },
-    { name: 'AIコンサルティング', href: '/services/ai-consulting' },
-    { name: 'SNSマーケティング', href: '/services/sns-marketing' },
   ],
   company: [
     { name: '会社情報', href: '/company' },
@@ -49,23 +47,14 @@ export function Footer() {
               一美Group
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
-              不動産・スーツ販売・AIコンサルティング・SNSマーケティングの4つの事業を通じて、
+              AI・スーツ販売の2つの事業を通じて、
               お客様のビジネスと生活を豊かにします。
             </p>
-            <div className="mt-6 space-y-3">
+            <div className="mt-6">
               <div className="flex items-center space-x-3 text-sm">
                 <Mail className="h-4 w-4 text-muted-foreground" />
                 <span>info@hitomi.co.jp</span>
               </div>
-              <a
-                href="https://youtube.com/@hitomi-company"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-3 text-sm transition-colors hover:text-primary"
-              >
-                <Youtube className="h-4 w-4 text-muted-foreground" />
-                <span>YouTube</span>
-              </a>
             </div>
           </div>
 
@@ -97,23 +86,14 @@ export function Footer() {
               一美Group
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
-              不動産・スーツ販売・AIコンサルティング・SNSマーケティングの4つの事業を通じて、
+              AI・スーツ販売の2つの事業を通じて、
               お客様のビジネスと生活を豊かにします。
             </p>
-            <div className="mt-6 space-y-3">
+            <div className="mt-6">
               <div className="flex items-center space-x-3 text-sm">
                 <Mail className="h-4 w-4 text-muted-foreground" />
                 <span>info@hitomi.co.jp</span>
               </div>
-              <a
-                href="https://youtube.com/@hitomi-company"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-3 text-sm transition-colors hover:text-primary"
-              >
-                <Youtube className="h-4 w-4 text-muted-foreground" />
-                <span>YouTube</span>
-              </a>
             </div>
           </div>
 

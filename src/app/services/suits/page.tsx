@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Clock, Shield, Ruler, Scissors } from 'lucide-react'
 import { Hero } from '@/components/sections/hero'
 import { Button } from '@/components/ui/button'
@@ -10,16 +11,10 @@ import { SectionHeader } from '@/components/sections/section-header'
 
 export const metadata: Metadata = {
   title: 'スーツ販売',
-  description: '上質な素材と確かな技術で、あなただけの一着をお仕立てします。オーダーメイドから既製品まで幅広く対応。',
+  description: '上質な素材と確かな技術で、あなただけの一着をお仕立てします。パターンオーダーからフルオーダーまで対応。',
 }
 
 const orderTypes = [
-  {
-    title: '既製品',
-    description: '豊富なサイズ展開とデザインから選べる既製スーツ',
-    price: '¥29,800〜',
-    features: ['幅広いサイズ展開', '即日お持ち帰り可能', '補正対応可'],
-  },
   {
     title: 'パターンオーダー',
     description: 'ベースパターンから体型に合わせて調整',
@@ -77,9 +72,10 @@ export default function SuitsPage() {
     <>
       <Hero
         subtitle="Suits"
-        title="上質なスーツで、あなたの魅力を引き出す"
+        title={"上質なスーツで\nあなたの魅力を引き出す"}
         description="確かな技術と厳選された素材で、ビジネスシーンを彩る一着をお仕立てします。"
         primaryCta={{ text: 'お問い合わせ', href: '/contact?type=suits-reservation' }}
+        backgroundImage="/images/suits/suits_main.jpg"
       />
 
       {/* Order Types */}
@@ -87,13 +83,13 @@ export default function SuitsPage() {
         <div className="container mx-auto px-4">
           <SectionHeader
             subtitle="Order Types"
-            title="3つのオーダータイプ"
+            title="2つのオーダータイプ"
             description="ご予算やニーズに合わせて最適なオーダー方法をお選びいただけます"
           />
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2">
             {orderTypes.map((type, index) => (
-              <Card key={type.title} className={index === 2 ? 'border-primary' : ''}>
-                {index === 2 && (
+              <Card key={type.title} className={index === 1 ? 'border-primary' : ''}>
+                {index === 1 && (
                   <div className="bg-primary px-4 py-1 text-center text-sm text-primary-foreground">
                     おすすめ
                   </div>
@@ -116,6 +112,85 @@ export default function SuitsPage() {
                   </ul>
                 </CardContent>
               </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Style Gallery */}
+      <section className="bg-muted/50 py-10 md:py-24">
+        <div className="container mx-auto px-4">
+          <SectionHeader
+            subtitle="Style Gallery"
+            title="スタイルギャラリー"
+            description="シーンに合わせた最適なスタイルをご提案します。"
+          />
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {[
+              {
+                title: 'ビジネス',
+                description: '毎日の仕事に最適な、機能性と品格を兼ね備えたスタイル。',
+                image: '/images/suits/suits_bussiness.png',
+              },
+              {
+                title: 'フォーマル',
+                description: '結婚式や式典など、特別な日のための格式高いスタイル。',
+                image: '/images/suits/suits_formal.png',
+              },
+              {
+                title: 'カジュアル',
+                description: '休日やカジュアルな場面で活躍する、リラックス感のあるスタイル。',
+                image: '/images/suits/suits_casual.png',
+              },
+            ].map((style) => (
+              <Card key={style.title} className="group overflow-hidden">
+                <div className="relative aspect-[3/4] overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
+                  <Image
+                    src={style.image}
+                    alt={style.title}
+                    fill
+                    className="object-fill transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 p-4 z-20">
+                    <h3 className="text-xl font-bold text-white">{style.title}</h3>
+                  </div>
+                </div>
+                <CardContent className="p-4">
+                  <p className="text-sm text-muted-foreground">{style.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process */}
+      <section className="py-10 md:py-24">
+        <div className="container mx-auto px-4">
+          <SectionHeader
+            subtitle="Process"
+            title="ご注文の流れ"
+            description="初めての方でも安心。5つのステップで理想の一着をお届けします。"
+          />
+          <div className="mt-12 grid gap-4 md:grid-cols-5">
+            {[
+              { number: '01', title: '相談・採寸', description: 'ご要望をヒアリングし、20箇所以上を丁寧に採寸します。' },
+              { number: '02', title: '生地選び', description: '100種類以上の生地から、用途や好みに合わせてお選びいただけます。' },
+              { number: '03', title: 'デザイン決定', description: 'ボタン・裏地・ポケットなど細部までカスタマイズ可能です。' },
+              { number: '04', title: '仕立て', description: '熟練の職人が一着一着丁寧に仕立てます。' },
+              { number: '05', title: '納品・調整', description: 'フィッティング確認後、必要に応じて無料で調整いたします。' },
+            ].map((step, index) => (
+              <div key={step.number} className="relative text-center">
+                {index < 4 && (
+                  <div className="absolute right-0 top-8 hidden h-0.5 w-full bg-primary/20 md:block" style={{ transform: 'translateX(50%)' }} />
+                )}
+                <div className="relative mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary text-xl font-bold text-primary-foreground">
+                  {step.number}
+                </div>
+                <h3 className="mb-2 font-semibold">{step.title}</h3>
+                <p className="text-sm text-muted-foreground">{step.description}</p>
+              </div>
             ))}
           </div>
         </div>

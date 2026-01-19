@@ -7,11 +7,8 @@ const FROM_EMAIL = process.env.FROM_EMAIL || 'noreply@example.com'
 const COMPANY_NAME = process.env.COMPANY_NAME || '一美Group'
 
 const inquiryTypeLabels: Record<string, string> = {
-  'suits-reservation': 'スーツ販売 - 無料相談',
-  'suits-inquiry': 'スーツ販売 - お問い合わせ',
-  'real-estate': '不動産 - 物件のお問い合わせ',
-  'consulting': 'AIコンサルティング - 無料相談',
-  'sns-marketing': 'SNSマーケティング - お問い合わせ',
+  'consulting': 'AI - お問い合わせ',
+  'suits': 'スーツ販売 - お問い合わせ',
   'recruit': '採用に関するお問い合わせ',
   'other': 'その他',
 }

@@ -1,27 +1,27 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Briefcase, Building2, Brain, Share2, ArrowRight } from 'lucide-react'
+import { Briefcase, Brain, ArrowRight } from 'lucide-react'
 import { Hero } from '@/components/sections/hero'
 import { Button } from '@/components/ui/button'
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card'
 
 export const metadata: Metadata = {
   title: '事業一覧',
-  description: '一美Groupの4つの事業領域をご紹介します。不動産・スーツ販売・AIコンサルティング・SNSマーケティング。',
+  description: '一美Groupの2つの事業領域をご紹介します。AI・スーツ販売。',
 }
 
 const services = [
   {
-    title: '不動産事業',
-    description: '売買・賃貸・管理・投資まで、不動産に関するあらゆるニーズにワンストップで対応します。',
+    title: 'AI',
+    description: 'ChatGPTや機械学習を活用したAI導入支援、および、業務自動化から生成AI活用まで、AIでビジネスを変革します。',
     features: [
-      '物件売買サポート',
-      '賃貸仲介・管理',
-      '投資物件相談',
+      'AI戦略策定',
+      '業務自動化・効率化',
+      '生成AI導入支援',
     ],
-    href: '/services/real-estate',
+    href: '/services/ai',
     cta: '詳しく見る',
-    icon: Building2,
+    icon: Brain,
   },
   {
     title: 'スーツ販売',
@@ -36,30 +36,6 @@ const services = [
     cta: '詳しく見る',
     icon: Briefcase,
   },
-  {
-    title: 'AIコンサルティング',
-    description: 'ChatGPTや機械学習を活用したAI導入支援、および、業務自動化から生成AI活用まで、AIでビジネスを変革します。',
-    features: [
-      'AI戦略策定',
-      '業務自動化・効率化',
-      '生成AI導入支援',
-    ],
-    href: '/services/ai-consulting',
-    cta: '詳しく見る',
-    icon: Brain,
-  },
-  {
-    title: 'SNSマーケティング',
-    description: 'Instagram、TikTok、X等のSNS運用からインフルエンサー活用まで、デジタルマーケティングを支援します。',
-    features: [
-      'SNS運用代行',
-      '広告運用',
-      'インフルエンサーマーケティング',
-    ],
-    href: '/services/sns-marketing',
-    cta: '詳しく見る',
-    icon: Share2,
-  },
 ]
 
 export default function ServicesPage() {
@@ -67,7 +43,7 @@ export default function ServicesPage() {
     <>
       <Hero
         subtitle="Our Services"
-        title="4つの事業領域"
+        title="2つの事業領域"
         description="それぞれの分野で培った専門性を活かし、お客様の多様なニーズにお応えします。"
       />
 

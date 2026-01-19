@@ -1,6 +1,6 @@
 <h1 align="center">一美Group Website</h1>
 
-一美Groupの公式ウェブサイトです。4つの主要事業（スーツ販売、不動産、AIコンサルティング、SNSマーケティング）を紹介し、お客様の多様なニーズに応えるサービスを提供しています。
+一美Groupの公式ウェブサイトです。2つの主要事業（AI、スーツ販売）を紹介し、お客様の多様なニーズに応えるサービスを提供しています。
 
 参考画像: 一美Group Webサイト - トップページ<br>
 <img width="647" height="540" align="center" alt="一美GroupWebサイト_トップページ" src="https://github.com/user-attachments/assets/79a82301-0133-4950-b47e-381d0cf0f81e" />
@@ -17,7 +17,7 @@
 ## 主な機能
 
 - レスポンシブデザイン（モバイル/デスクトップ対応）
-- 4事業のサービス紹介ページ
+- 2つの事業のサービス紹介ページ
 - お問い合わせフォーム（メール送信機能付き）
 - 会社情報・採用情報ページ
 - SEO最適化
@@ -36,9 +36,7 @@ src/
 │   │   └── terms/         # 利用規約
 │   ├── recruit/           # 採用情報
 │   └── services/          # 事業紹介
-│       ├── ai-consulting/ # AIコンサルティング
-│       ├── real-estate/   # 不動産
-│       ├── sns-marketing/ # SNSマーケティング
+│       ├── ai/            # AI
 │       └── suits/         # スーツ販売
 ├── components/
 │   ├── layout/            # レイアウトコンポーネント
@@ -123,10 +121,8 @@ npm run start
 | パス | ページ名 |
 |------|----------|
 | `/` | トップページ |
+| `/services/ai` | AI |
 | `/services/suits` | スーツ販売 |
-| `/services/real-estate` | 不動産事業 |
-| `/services/ai-consulting` | AIコンサルティング |
-| `/services/sns-marketing` | SNSマーケティング |
 | `/company` | 会社情報 |
 | `/recruit` | 採用情報 |
 | `/contact` | お問い合わせ |

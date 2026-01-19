@@ -31,7 +31,7 @@ const culture = [
   {
     icon: Briefcase,
     title: '多様なキャリア',
-    description: '4つの事業で多様なキャリアパスを描くことができます。',
+    description: '2つの事業で多様なキャリアパスを描くことができます。',
   },
 ]
 
@@ -79,10 +79,10 @@ export default function RecruitPage() {
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-6 text-2xl font-bold sm:mb-8 sm:text-3xl">採用メッセージ</h2>
             <p className="mb-4 text-sm leading-relaxed text-muted-foreground sm:mb-6 sm:text-base">
-              一美Groupは2026年に設立したばかりのスタートアップです。不動産・スーツ販売・AIコンサルティング・SNSマーケティングの4つの事業を展開し、お客様の多様なニーズにお応えしています。
+              一美Groupは2026年に設立したばかりのスタートアップです。AI・スーツ販売の2つの事業を展開し、お客様の多様なニーズにお応えしています。
             </p>
             <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
-              現在は4名の少数精鋭チームですが、事業拡大に伴い新たな仲間を募集しています。スタートアップならではのスピード感と裁量を持って働きたい方、ぜひ一緒に会社を成長させていきましょう。
+              現在は2名の少数精鋭チームですが、事業拡大に伴い新たな仲間を募集しています。スタートアップならではのスピード感と裁量を持って働きたい方、ぜひ一緒に会社を成長させていきましょう。
             </p>
           </div>
         </div>

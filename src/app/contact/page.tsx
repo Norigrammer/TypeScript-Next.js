@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import { Mail, Youtube, Send, ChevronDown } from 'lucide-react'
+import { Mail, Send, ChevronDown } from 'lucide-react'
 import { Hero } from '@/components/sections/hero'
 import { Button } from '@/components/ui/button'
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card'
@@ -10,11 +10,8 @@ import { Textarea } from '@/components/ui/textarea'
 import { Label } from '@/components/ui/label'
 
 const inquiryTypes = [
-  { value: 'suits-reservation', label: 'スーツ販売 - 無料相談' },
-  { value: 'suits-inquiry', label: 'スーツ販売 - お問い合わせ' },
-  { value: 'real-estate', label: '不動産 - 物件のお問い合わせ' },
-  { value: 'consulting', label: 'AIコンサルティング - 無料相談' },
-  { value: 'sns-marketing', label: 'SNSマーケティング - お問い合わせ' },
+  { value: 'consulting', label: 'AI - お問い合わせ' },
+  { value: 'suits', label: 'スーツ販売 - お問い合わせ' },
   { value: 'recruit', label: '採用に関するお問い合わせ' },
   { value: 'other', label: 'その他' },
 ]
@@ -116,26 +113,12 @@ export default function ContactPage() {
                     メールでもお問い合わせいただけます
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-6">
+                <CardContent>
                   <div className="flex items-start gap-4">
                     <Mail className="mt-1 h-5 w-5 text-primary" />
                     <div>
                       <p className="font-medium">メール</p>
                       <p className="text-muted-foreground">info@hitomi.co.jp</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <Youtube className="mt-1 h-5 w-5 text-primary" />
-                    <div>
-                      <p className="font-medium">YouTube</p>
-                      <a
-                        href="https://youtube.com/@hitomi-company"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-muted-foreground transition-colors hover:text-primary"
-                      >
-                        @hitomi-company
-                      </a>
                     </div>
                   </div>
                 </CardContent>

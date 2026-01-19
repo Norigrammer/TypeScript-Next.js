@@ -1,12 +1,9 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
-import { Youtube, Mail } from 'lucide-react'
 import { Hero } from '@/components/sections/hero'
 import { Card, CardContent } from '@/components/ui/card'
 import { SectionHeader } from '@/components/sections/section-header'
 import { CtaSection } from '@/components/sections/cta-section'
-import { Button } from '@/components/ui/button'
 
 export const metadata: Metadata = {
   title: '会社情報',
@@ -17,8 +14,8 @@ const companyInfo = [
   { label: '会社名', value: '一美Group' },
   { label: '設立', value: '2026年3月31日' },
   { label: '代表取締役', value: '渡辺 翔太' },
-  { label: '従業員数', value: '4名' },
-  { label: '事業内容', value: '不動産事業、スーツ販売、AIコンサルティング、SNSマーケティング' },
+  { label: '従業員数', value: '2名' },
+  { label: '事業内容', value: 'AI、スーツ販売' },
   { label: 'メール', value: 'info@hitomi.co.jp' },
 ]
 
@@ -45,23 +42,13 @@ const team = [
   {
     name: '渡辺 翔太',
     role: '代表取締役 CEO',
-    description: '創業者\n経営全般を統括',
-  },
-  {
-    name: '矢加部 桂馬',
-    role: '取締役 COO',
-    description: '不動産事業責任者・スーツ販売責任者\n事業運営全般を統括',
+    description: '創業者、スーツ販売責任者\n経営全般を統括',
   },
   {
     name: '下川 大慶',
     role: '取締役 CTO',
     description: '技術部門を統括\nシステム・インフラ全般を担当',
     image: '/images/company/company_shimogawa.jpg',
-  },
-  {
-    name: '平尾 拳成',
-    role: '取締役 CMO',
-    description: 'SNSマーケティング事業責任者\nマーケティング戦略を統括',
   },
 ]
 
@@ -84,7 +71,7 @@ export default function CompanyPage() {
               「誰かのために、社会のために。」
             </p>
             <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
-              私たち一美グループは若手を中心としたチームで、不動産事業・スーツ販売・AIコンサルティング・SNSマーケティングの4つの事業を通じて、お客様一人ひとりと真摯に向き合います。
+              私たち一美グループは若手を中心としたチームで、AI・スーツ販売の2つの事業を通じて、お客様一人ひとりと真摯に向き合います。
             </p>
           </div>
         </div>
@@ -149,20 +136,6 @@ export default function CompanyPage() {
               </CardContent>
             </Card>
 
-            {/* YouTube Link */}
-            <div className="mt-8 text-center">
-              <Button asChild variant="outline" size="lg">
-                <a
-                  href="https://youtube.com/@hitomi-company"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2"
-                >
-                  <Youtube className="h-5 w-5" />
-                  YouTubeチャンネル
-                </a>
-              </Button>
-            </div>
           </div>
         </div>
       </section>
@@ -175,7 +148,7 @@ export default function CompanyPage() {
             title="経営陣"
             description="一美Groupを率いるメンバー"
           />
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 md:grid-cols-2">
             {team.map((member) => (
               <Card key={member.name}>
                 <CardContent className="p-6 text-center">

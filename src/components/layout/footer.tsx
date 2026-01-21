@@ -53,7 +53,7 @@ export function Footer() {
             <div className="mt-6">
               <div className="flex items-center space-x-3 text-sm">
                 <Mail className="h-4 w-4 text-muted-foreground" />
-                <span>info@hitomi.co.jp</span>
+                <span>info@hitomi-group.jp</span>
               </div>
             </div>
           </div>
@@ -92,7 +92,7 @@ export function Footer() {
             <div className="mt-6">
               <div className="flex items-center space-x-3 text-sm">
                 <Mail className="h-4 w-4 text-muted-foreground" />
-                <span>info@hitomi.co.jp</span>
+                <span>info@hitomi-group.jp</span>
               </div>
             </div>
           </div>

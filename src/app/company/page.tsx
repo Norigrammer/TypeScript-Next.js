@@ -16,7 +16,7 @@ const companyInfo = [
   { label: '代表取締役', value: '渡辺 翔太' },
   { label: '従業員数', value: '2名' },
   { label: '事業内容', value: 'AI、スーツ販売' },
-  { label: 'メール', value: 'info@hitomi.co.jp' },
+  { label: 'メール', value: 'info@hitomi-group.jp' },
 ]
 
 const values = [
@@ -43,6 +43,7 @@ const team = [
     name: '渡辺 翔太',
     role: '代表取締役 CEO',
     description: '創業者、スーツ販売責任者\n経営全般を統括',
+    image: '/images/company/company_watanabe.jpg',
   },
   {
     name: '下川 大慶',

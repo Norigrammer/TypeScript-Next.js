@@ -15,7 +15,7 @@ export default function TermsPage() {
         title="利用規約"
       />
 
-      <section className="py-10 md:py-24">
+      <section className="py-3 md:py-6">
         <div className="container mx-auto px-4">
           <Card className="mx-auto max-w-4xl">
             <CardContent className="prose prose-sm max-w-none p-8">
@@ -51,10 +51,10 @@ export default function TermsPage() {
               </p>
 
               <h2 className="mt-8 text-xl font-bold">第6条（お問い合わせ）</h2>
-              <p>本規約に関するお問い合わせは、以下までご連絡ください：</p>
+              <p>本規約に関するお問い合わせは、以下までご連絡ください。</p>
               <p>
                 一美Group<br />
-                Email: info@hitomi.co.jp
+                Email: info@hitomi-group.jp
               </p>
             </CardContent>
           </Card>

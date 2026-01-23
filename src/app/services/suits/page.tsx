@@ -33,22 +33,22 @@ const features = [
   {
     icon: Scissors,
     title: '熟練の職人技',
-    description: '経験豊富な職人が一着一着丁寧に仕立てます',
+    description: '経験豊富な職人が一着一着丁寧に仕立てます。',
   },
   {
     icon: Ruler,
     title: '精密な採寸',
-    description: '20箇所以上を測定し、完璧なフィット感を実現',
+    description: '20箇所以上を測定し、完璧なフィット感を実現。',
   },
   {
     icon: Shield,
     title: 'サイズ保証',
-    description: '納品後のサイズ調整は無料で対応いたします',
+    description: '納品後のサイズ調整は無料で対応いたします。',
   },
   {
     icon: Clock,
     title: 'スピード対応',
-    description: 'お急ぎの場合は特急仕上げにも対応可能',
+    description: 'お急ぎの場合は特急仕上げにも対応可能。',
   },
 ]
 
@@ -84,7 +84,7 @@ export default function SuitsPage() {
           <SectionHeader
             subtitle="Order Types"
             title="2つのオーダータイプ"
-            description="ご予算やニーズに合わせて最適なオーダー方法をお選びいただけます"
+            description="ご予算やニーズに合わせて最適なオーダー方法をお選びいただけます。"
           />
           <div className="grid gap-6 md:grid-cols-2">
             {orderTypes.map((type, index) => (

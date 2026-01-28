@@ -1,16 +1,30 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Briefcase, Brain, ArrowRight } from 'lucide-react'
+import { Briefcase, Brain, Phone, ArrowRight } from 'lucide-react'
 import { Hero } from '@/components/sections/hero'
 import { Button } from '@/components/ui/button'
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card'
 
 export const metadata: Metadata = {
   title: '事業一覧',
-  description: '一美Groupの2つの事業領域をご紹介します。AI・スーツ販売。',
+  description: '一美Groupの3つの事業領域をご紹介します。営業代行・AI・スーツ販売。',
 }
 
 const services = [
+  {
+    title: '営業代行',
+    description: 'テレアポ代行からフィールドセールスまで、貴社の営業活動を包括的にサポート。経験豊富な営業チームが成果にコミットします。',
+    features: [
+      'テレアポ代行',
+      'インサイドセールス',
+      'フィールドセールス',
+      '営業コンサルティング',
+    ],
+    href: '/services/sales',
+    cta: '詳しく見る',
+    icon: Phone,
+    isMain: true,
+  },
   {
     title: 'AI',
     description: 'ChatGPTや機械学習を活用したAI導入支援、および、業務自動化から生成AI活用まで、AIでビジネスを変革します。',
@@ -22,6 +36,7 @@ const services = [
     href: '/services/ai',
     cta: '詳しく見る',
     icon: Brain,
+    isMain: false,
   },
   {
     title: 'スーツ販売',
@@ -35,6 +50,7 @@ const services = [
     href: '/services/suits',
     cta: '詳しく見る',
     icon: Briefcase,
+    isMain: false,
   },
 ]
 
@@ -43,21 +59,31 @@ export default function ServicesPage() {
     <>
       <Hero
         subtitle="Our Services"
-        title="2つの事業領域"
+        title="3つの事業領域"
         description="それぞれの分野で培った専門性を活かし、お客様の多様なニーズにお応えします。"
       />
 
       {/* Services Grid */}
       <section className="py-10 md:py-24">
         <div className="container mx-auto px-4">
-          <div className="grid gap-8 lg:grid-cols-2">
+          <div className="grid gap-8 lg:grid-cols-3">
             {services.map((service) => {
               const Icon = service.icon
               return (
-                <Card key={service.title} className="flex flex-col">
+                <Card
+                  key={service.title}
+                  className={`flex flex-col ${service.isMain ? 'border-primary shadow-lg' : ''}`}
+                >
                   <CardHeader>
-                    <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                      <Icon className="h-6 w-6 text-primary" />
+                    <div className="mb-4 flex items-center gap-3">
+                      <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+                        <Icon className="h-6 w-6 text-primary" />
+                      </div>
+                      {service.isMain && (
+                        <span className="rounded-full bg-primary px-3 py-1 text-xs font-medium text-primary-foreground">
+                          メイン事業
+                        </span>
+                      )}
                     </div>
                     <CardTitle className="text-2xl">{service.title}</CardTitle>
                     <CardDescription className="text-base">
@@ -75,7 +101,7 @@ export default function ServicesPage() {
                     </ul>
                   </CardContent>
                   <CardFooter>
-                    <Button asChild>
+                    <Button asChild variant={service.isMain ? 'default' : 'outline'}>
                       <Link href={service.href}>
                         {service.cta}
                         <ArrowRight className="ml-2 h-4 w-4" />

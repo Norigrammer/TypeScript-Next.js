@@ -11,12 +11,12 @@ const notoSansJP = Noto_Sans_JP({
 
 export const metadata: Metadata = {
   title: {
-    default: '一美Group | AI・スーツ販売',
+    default: '一美Group | 営業代行・AI・スーツ販売',
     template: '%s | 一美Group',
   },
   description:
-    '一美Groupは、AI・スーツ販売の2つの事業を通じて、お客様のビジネスと生活を豊かにします。',
-  keywords: ['一美Group', 'AI', 'スーツ販売'],
+    '一美Groupは、営業代行・AI・スーツ販売の3つの事業を通じて、お客様のビジネスと生活を豊かにします。',
+  keywords: ['一美Group', '営業代行', 'AI', 'スーツ販売'],
   authors: [{ name: '一美Group' }],
   openGraph: {
     type: 'website',

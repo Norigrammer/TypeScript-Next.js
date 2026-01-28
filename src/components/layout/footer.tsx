@@ -12,6 +12,7 @@ import {
 
 const footerLinks = {
   services: [
+    { name: '営業代行', href: '/services/sales' },
     { name: 'AI', href: '/services/ai' },
     { name: 'スーツ販売', href: '/services/suits' },
   ],
@@ -47,7 +48,7 @@ export function Footer() {
               一美Group
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
-              AI・スーツ販売の2つの事業を通じて、
+              営業代行・AI・スーツ販売の3つの事業を通じて、
               お客様のビジネスと生活を豊かにします。
             </p>
             <div className="mt-6">
@@ -86,7 +87,7 @@ export function Footer() {
               一美Group
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
-              AI・スーツ販売の2つの事業を通じて、
+              営業代行・AI・スーツ販売の3つの事業を通じて、
               お客様のビジネスと生活を豊かにします。
             </p>
             <div className="mt-6">

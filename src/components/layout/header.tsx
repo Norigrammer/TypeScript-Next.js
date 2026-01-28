@@ -7,6 +7,7 @@ import { Menu, X, ChevronDown } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const services = [
+  { name: '営業代行', href: '/services/sales', description: 'テレアポ・セールス代行' },
   { name: 'AI', href: '/services/ai', description: 'ChatGPT活用・業務自動化支援' },
   { name: 'スーツ販売', href: '/services/suits', description: '上質なオーダーメイドスーツ' },
 ]

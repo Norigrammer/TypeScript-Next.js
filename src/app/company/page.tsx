@@ -15,7 +15,7 @@ const companyInfo = [
   { label: '設立', value: '2026年3月31日' },
   { label: '代表取締役', value: '渡辺 翔太' },
   { label: '従業員数', value: '2名' },
-  { label: '事業内容', value: 'AI、スーツ販売' },
+  { label: '事業内容', value: '営業代行、AI、スーツ販売' },
   { label: 'メール', value: 'info@hitomi-group.jp' },
 ]
 
@@ -42,7 +42,7 @@ const team = [
   {
     name: '渡辺 翔太',
     role: '代表取締役 CEO',
-    description: '創業者、スーツ販売責任者\n経営全般を統括',
+    description: '創業者\n経営全般を統括',
     image: '/images/company/company_watanabe.jpg',
   },
   {
@@ -72,7 +72,7 @@ export default function CompanyPage() {
               「誰かのために、社会のために。」
             </p>
             <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
-              私たち一美グループは若手を中心としたチームで、AI・スーツ販売の2つの事業を通じて、お客様一人ひとりと真摯に向き合います。
+              私たち一美グループは若手を中心としたチームで、営業代行・AI・スーツ販売の3つの事業を通じて、お客様一人ひとりと真摯に向き合います。
             </p>
           </div>
         </div>

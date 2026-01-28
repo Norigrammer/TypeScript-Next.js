@@ -15,7 +15,3 @@
 - インデント: 2スペース
 - ファイル命名: kebab-case
 - 絶対パスではなく相対パスを使ってください
-
-## よく使うコマンド
-npx expo start    // Expo起動
-npx expo start -c    // Expoキャッシュクリア起動
